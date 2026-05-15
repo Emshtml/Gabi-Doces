@@ -59,7 +59,7 @@ function finalizar() {
     msg += `- ${p.nome}%0A`;
   });
 
-  window.open(`https://wa.me/5511999999999?text=${msg}`);
+  window.open(`https://wa.me/5511992952215?text=${msg}`);
 }
 
 carregarProdutos();
