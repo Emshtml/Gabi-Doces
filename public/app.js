@@ -13,6 +13,66 @@ const produtos = [
     nome: "Ninho",
     preco: 14,
     img: "imagens/ninho.jpg"
+  },
+  {
+    nome: "Prestígio",
+    preco: 15,
+    img: "imagens/prestigio.jpg"
+  },
+  {
+    nome: "Oreo",
+    preco: 16,
+    img: "imagens/oreo.jpg"
+  },
+  {
+    nome: "Nutella",
+    preco: 18,
+    img: "imagens/nutella.jpg"
+  },
+  {
+    nome: "Kinder Bueno",
+    preco: 20,
+    img: "imagens/kinder-bueno.jpg"
+  },
+  {
+    nome: "Paçoca",
+    preco: 13,
+    img: "imagens/pacoca.jpg"
+  },
+  {
+    nome: "Leite Condensado",
+    preco: 12,
+    img: "imagens/leite-condensado.jpg"
+  },
+  {
+    nome: "Limão",
+    preco: 13,
+    img: "imagens/limao.jpg"
+  },
+  {
+    nome: "Red Velvet",
+    preco: 19,
+    img: "imagens/red-velvet.jpg"
+  },
+  {
+    nome: "Brigadeiro Gourmet",
+    preco: 15,
+    img: "imagens/brigadeiro-gourmet.jpg"
+  },
+  {
+    nome: "Maracujá",
+    preco: 14,
+    img: "imagens/maracuja.jpg"
+  },
+  {
+    nome: "Churros",
+    preco: 17,
+    img: "imagens/churros.jpg"
+  },
+  {
+    nome: "Ferrero Rocher",
+    preco: 22,
+    img: "imagens/ferrero-rocher.jpg"
   }
 ];
 
@@ -55,9 +115,12 @@ function atualizarCarrinho() {
 
 function finalizar() {
   let msg = "Pedido:%0A";
+
   carrinho.forEach(p => {
     msg += `- ${p.nome}%0A`;
   });
+
+  msg += `%0ATotal do pedido confirmado 🍰`;
 
   window.open(`https://wa.me/5511992952215?text=${msg}`);
 }
