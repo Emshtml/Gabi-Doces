@@ -1,59 +1,219 @@
-body {
-  font-family: Arial;
-  margin: 0;
-  background: #fff0f3;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-header {
-  background: #ff4d6d;
-  color: white;
-  text-align: center;
-  padding: 20px;
+body{
+  font-family:'Poppins',sans-serif;
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.65)
+    ),
+    url('https://images.unsplash.com/photo-1559620192-032c4bc4674e?q=80&w=1974&auto=format&fit=crop');
+    
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  min-height:100vh;
+  color:white;
 }
 
-.banner {
-  text-align: center;
-  background: #ffe5ec;
-  padding: 10px;
+/* HEADER MODERNO */
+
+header{
+  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,0.08);
+  border-bottom:1px solid rgba(255,255,255,0.15);
+  text-align:center;
+  padding:40px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.2);
 }
 
-.produtos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+header h1{
+  font-size:3rem;
+  font-weight:600;
+  margin-bottom:10px;
+  letter-spacing:1px;
 }
 
-.card {
-  background: white;
-  width: 200px;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+header p{
+  color:#ffe5ec;
+  font-size:1.1rem;
 }
 
-.card img {
-  width: 100%;
-  border-radius: 10px;
+/* BANNER */
+
+.banner{
+  width:90%;
+  max-width:1200px;
+  margin:30px auto;
+  padding:30px;
+  border-radius:20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,77,109,0.85),
+      rgba(255,143,163,0.75)
+    );
+
+  text-align:center;
+  backdrop-filter:blur(8px);
+  box-shadow:0 8px 30px rgba(0,0,0,0.25);
 }
 
-button {
-  background: #ff4d6d;
-  color: white;
-  border: none;
-  padding: 8px;
-  margin-top: 5px;
-  border-radius: 6px;
-  cursor: pointer;
+.banner h2{
+  font-size:2rem;
+  font-weight:600;
 }
 
-.carrinho {
-  position: fixed;
-  right: 10px;
-  top: 10px;
-  width: 220px;
-  background: white;
-  padding: 10px;
-  border-radius: 10px;
+/* PRODUTOS */
+
+.produtos{
+  width:95%;
+  max-width:1400px;
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+
+  padding:20px;
+}
+
+/* CARD MODERNO */
+
+.card{
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(14px);
+
+  border:1px solid rgba(255,255,255,0.15);
+
+  border-radius:22px;
+  overflow:hidden;
+
+  transition:0.35s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 20px 40px rgba(0,0,0,0.35);
+}
+
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.card h3{
+  font-size:1.4rem;
+  padding:15px 15px 5px;
+  color:white;
+}
+
+.card p{
+  padding:0 15px;
+  color:#ffe5ec;
+  font-size:1.1rem;
+}
+
+/* BOTÃO PREMIUM */
+
+button{
+  width:calc(100% - 30px);
+  margin:15px;
+  padding:14px;
+
+  border:none;
+  border-radius:12px;
+
+  background:linear-gradient(
+    135deg,
+    #ff4d6d,
+    #ff758f
+  );
+
+  color:white;
+  font-size:1rem;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.03);
+  opacity:0.95;
+}
+
+/* CARRINHO */
+
+.carrinho{
+  position:fixed;
+  right:20px;
+  top:20px;
+
+  width:280px;
+
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(15px);
+
+  border:1px solid rgba(255,255,255,0.15);
+
+  padding:20px;
+  border-radius:22px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+
+  z-index:999;
+}
+
+.carrinho h2{
+  margin-bottom:15px;
+}
+
+.carrinho ul{
+  list-style:none;
+  margin-bottom:15px;
+}
+
+.carrinho li{
+  padding:8px 0;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+#total{
+  font-size:1.2rem;
+  font-weight:600;
+  margin-top:10px;
+  color:#fff;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+  header h1{
+    font-size:2rem;
+  }
+
+  .banner h2{
+    font-size:1.3rem;
+  }
+
+  .carrinho{
+    position:relative;
+    width:90%;
+    margin:20px auto;
+    right:auto;
+    top:auto;
+  }
+
 }
