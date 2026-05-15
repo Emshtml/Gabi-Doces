@@ -72,7 +72,7 @@ const produtos = [
   {
     nome: "Ferrero Rocher",
     preco: 22,
-    img: "imagens/ferrero-rocher.jpg"
+    img: "imagens/ferrero-rocher.jpeg"
   }
 ];
 
