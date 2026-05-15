@@ -1,0 +1,11 @@
+{
+  "name": "gabi-doces",
+  "version": "1.0.0",
+  "description": "App de vendas Gabi Doces",
+  "scripts": {
+    "start": "serve public"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
