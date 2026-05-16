@@ -1,30 +1,413 @@
+# 🍰 Landing Page — Gabi Doces
+
+## 📄 index.html
+
+```html
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gabi Doces 🍰</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#fff7f8;
+      color:#222;
+    }
+
+    header{
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.65)),
+      url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1974&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+      color:white;
+    }
+
+    .hero{
+      max-width:800px;
+    }
+
+    .hero h1{
+      font-size:4rem;
+      margin-bottom:20px;
+      font-weight:700;
+    }
+
+    .hero p{
+      font-size:1.3rem;
+      margin-bottom:30px;
+      color:#ffe5ec;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#25D366;
+      color:white;
+      padding:16px 28px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+      box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .btn:hover{
+      transform:translateY(-4px);
+    }
+
+    .sabores{
+      padding:80px 20px;
+      max-width:1400px;
+      margin:auto;
+    }
+
+    .titulo{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .titulo h2{
+      font-size:3rem;
+      color:#ff4d6d;
+      margin-bottom:10px;
+    }
+
+    .titulo p{
+      color:#666;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:0 12px 30px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card-content h3{
+      margin-bottom:10px;
+      color:#ff4d6d;
+    }
+
+    .preco{
+      font-size:1.2rem;
+      font-weight:700;
+      margin:15px 0;
+    }
+
+    .whatsapp{
+      display:block;
+      width:100%;
+      text-align:center;
+      background:#25D366;
+      color:white;
+      text-decoration:none;
+      padding:12px;
+      border-radius:12px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .whatsapp:hover{
+      opacity:0.9;
+    }
+
+    .sobre{
+      padding:80px 20px;
+      background:#fff0f3;
+    }
+
+    .sobre-box{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:40px;
+      align-items:center;
+    }
+
+    .sobre img{
+      width:100%;
+      border-radius:24px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.1);
+    }
+
+    .sobre h2{
+      font-size:3rem;
+      color:#ff4d6d;
+      margin-bottom:20px;
+    }
+
+    .sobre p{
+      line-height:1.8;
+      color:#444;
+    }
+
+    footer{
+      background:#111;
+      color:white;
+      text-align:center;
+      padding:40px 20px;
+    }
+
+    footer a{
+      color:#25D366;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:2.6rem;
+      }
+
+      .titulo h2,
+      .sobre h2{
+        font-size:2rem;
+      }
+
+    }
+
+  </style>
 </head>
 <body>
 
 <header>
-  <h1>🍰 Gabi Doces</h1>
-  <p>Doces artesanais irresistíveis</p>
+  <div class="hero">
+    <h1>🍰 Gabi Doces</h1>
+    <p>Os bolos de pote mais irresistíveis da cidade com entrega rápida e sabor premium.</p>
+
+    <a
+      class="btn"
+      href="https://wa.me/5511992952215?text=Olá%20Gabi%20Doces!%20Quero%20fazer%20um%20pedido%20🍰"
+      target="_blank"
+    >
+      Pedir no WhatsApp
+    </a>
+  </div>
 </header>
 
-<section class="banner">
-  <h2>🔥 Promoção: 3 por R$60</h2>
+<section class="sabores">
+
+  <div class="titulo">
+    <h2>Sabores Gourmet</h2>
+    <p>Escolha seu favorito 🍓</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=1974&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Chocolate</h3>
+        <p>Cremoso, intenso e irresistível.</p>
+        <div class="preco">R$ 10</div>
+        <a class="whatsapp" href="https://wa.me/5511992952215?text=Quero%20bolo%20de%20pote%20Chocolate">Comprar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=1974&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Morango</h3>
+        <p>Camadas com morango fresco.</p>
+        <div class="preco">R$ 12</div>
+        <a class="whatsapp" href="https://wa.me/5511992952215?text=Quero%20bolo%20de%20pote%20Morango">Comprar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?q=80&w=1974&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Ninho</h3>
+        <p>Leite ninho gourmet ultra cremoso.</p>
+        <div class="preco">R$ 14</div>
+        <a class="whatsapp" href="https://wa.me/5511992952215?text=Quero%20bolo%20de%20pote%20Ninho">Comprar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=1974&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Nutella</h3>
+        <p>Nutella premium com massa fofinha.</p>
+        <div class="preco">R$ 18</div>
+        <a class="whatsapp" href="https://wa.me/5511992952215?text=Quero%20bolo%20de%20pote%20Nutella">Comprar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=1974&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Oreo</h3>
+        <p>Crocante e extremamente cremoso.</p>
+        <div class="preco">R$ 16</div>
+        <a class="whatsapp" href="https://wa.me/5511992952215?text=Quero%20bolo%20de%20pote%20Oreo">Comprar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=1974&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Prestígio</h3>
+        <p>Chocolate com coco premium.</p>
+        <div class="preco">R$ 15</div>
+        <a class="whatsapp" href="https://wa.me/5511992952215?text=Quero%20bolo%20de%20pote%20Prestígio">Comprar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1464306076886-da185f6a9d05?q=80&w=1974&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Paçoca</h3>
+        <p>Sabor brasileiro gourmet.</p>
+        <div class="preco">R$ 13</div>
+        <a class="whatsapp" href="https://wa.me/5511992952215?text=Quero%20bolo%20de%20pote%20Paçoca">Comprar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?q=80&w=1974&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Red Velvet</h3>
+        <p>Elegante e sofisticado.</p>
+        <div class="preco">R$ 19</div>
+        <a class="whatsapp" href="https://wa.me/5511992952215?text=Quero%20bolo%20de%20pote%20Red%20Velvet">Comprar</a>
+      </div>
+    </div>
+
+  </div>
+
 </section>
 
-<section class="produtos" id="lista"></section>
+<section class="sobre">
 
-<div class="carrinho">
-  <h2>🛒 Carrinho</h2>
-  <ul id="carrinho"></ul>
-  <p id="total"></p>
-  <button onclick="finalizar()">Finalizar Pedido</button>
-</div>
+  <div class="sobre-box">
+
+    <div>
+      <h2>Confeitaria Premium</h2>
+
+      <p>
+        A Gabi Doces nasceu para transformar bolos de pote em uma experiência gourmet.
+        Trabalhamos com ingredientes selecionados, receitas artesanais e sabores que conquistam desde a primeira colherada.
+      </p>
+
+      <br>
+
+      <a
+        class="btn"
+        href="https://wa.me/5511992952215?text=Olá%20Gabi%20Doces!%20Quero%20conhecer%20o%20cardápio%20🍰"
+        target="_blank"
+      >
+        Fazer Pedido
+      </a>
+
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1974&auto=format&fit=crop">
+
+  </div>
+
+</section>
+
+<footer>
+  <h3>🍰 Gabi Doces</h3>
+  <p>Pedidos e atendimento via WhatsApp</p>
+  <br>
+  <a href="https://wa.me/5511992952215" target="_blank">
+    Chamar no WhatsApp
+  </a>
+</footer>
 
 </body>
-<script src="app.js"></script>
 </html>
+```
+
+---
+
+# 🚀 COMO USAR
+
+## 📁 Estrutura
+
+```bash
+public/
+ ├── index.html
+```
+
+---
+
+## 🔥 DEPLOY
+
+Suba no:
+
+* GitHub
+* Vercel
+
+Depois:
+
+1. Import Project
+2. Deploy
+3. Site online
+
+---
+
+# 📲 WHATSAPP
+
+Número integrado:
+
+```bash
+5511992952215
+```
+
+---
+
+# ✨ O QUE ESSA LANDING TEM
+
+✅ Visual premium
+✅ Fotos reais de confeitaria
+✅ Responsivo mobile
+✅ Botões de venda via WhatsApp
+✅ Cards modernos
+✅ Hero section profissional
+✅ Estrutura pronta para conversão
+✅ Estilo app de delivery gourmet
