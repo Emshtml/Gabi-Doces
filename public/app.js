@@ -2,77 +2,77 @@ const produtos = [
   {
     nome: "Chocolate",
     preco: 10,
-    img: "imagens/chocolate.jpeg"
+    img: "imagens/chocolate.jpg"
   },
   {
     nome: "Morango",
     preco: 12,
-    img: "imagens/morango.jpeg"
+    img: "imagens/morango.jpg"
   },
   {
     nome: "Ninho",
     preco: 14,
-    img: "imagens/ninho.jpeg"
+    img: "imagens/ninho.jpg"
   },
   {
     nome: "Prestígio",
     preco: 15,
-    img: "imagens/prestigio.jpeg"
+    img: "imagens/prestigio.jpg"
   },
   {
     nome: "Oreo",
     preco: 16,
-    img: "imagens/oreo.jpeg"
+    img: "imagens/oreo.jpg"
   },
   {
     nome: "Nutella",
     preco: 18,
-    img: "imagens/nutella.jpeg"
+    img: "imagens/nutella.jpg"
   },
   {
     nome: "Kinder Bueno",
     preco: 20,
-    img: "imagens/kinder-bueno.jpeg"
+    img: "imagens/kinder-bueno.jpg"
   },
   {
     nome: "Paçoca",
     preco: 13,
-    img: "imagens/pacoca.jpeg"
+    img: "imagens/pacoca.jpg"
   },
   {
     nome: "Leite Condensado",
     preco: 12,
-    img: "imagens/leite-condensado.jpeg"
+    img: "imagens/leite-condensado.jpg"
   },
   {
     nome: "Limão",
     preco: 13,
-    img: "imagens/limao.jpeg"
+    img: "imagens/limao.jpg"
   },
   {
     nome: "Red Velvet",
     preco: 19,
-    img: "imagens/red-velvet.jpeg"
+    img: "imagens/red-velvet.jpg"
   },
   {
     nome: "Brigadeiro Gourmet",
     preco: 15,
-    img: "imagens/brigadeiro-gourmet.jpeg"
+    img: "imagens/brigadeiro-gourmet.jpg"
   },
   {
     nome: "Maracujá",
     preco: 14,
-    img: "imagens/maracuja.jpeg"
+    img: "imagens/maracuja.jpg"
   },
   {
     nome: "Churros",
     preco: 17,
-    img: "imagens/churros.jpeg"
+    img: "imagens/churros.jpg"
   },
   {
     nome: "Ferrero Rocher",
     preco: 22,
-    img: "imagens/ferrero-rocher.jpeg"
+    img: "imagens/ferrero-rocher.jpg"
   }
 ];
 
